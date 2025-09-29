@@ -1,11 +1,13 @@
 [project]
-name = "nonebot-plugin-template"
+name = "nonebot_plugin_funticon"
 version = "0.1.0"
-description = "<your_plugin_description>"
+description = "Nonebot2 插件：群工具"
 authors = [
-    {name = "<your_github>", email = "<your_email>"},
+    {name = "EnderKylin", email = "3162176860@qq.com"},
 ]
 dependencies = [
+    "aiohttp>=3.12.15",
+    "nonebot-adapter-onebot>=2.4.6",
     "nonebot2>=2.3.1",
 ]
 requires-python = ">=3.9"
@@ -21,7 +23,7 @@ build-backend = "pdm.backend"
 distribution = true
 
 [tool.pdm.build]
-includes = ["src"]
+includes = ["nonebot_plugin_funticon"]
 
 [tool.pdm.dev-dependencies]
 dev = [
@@ -65,7 +67,7 @@ typeCheckingMode = "basic"
 
 [tool.nonebot]
 adapters = [
-
+    "~onebot"
 ]
 plugin_dirs = ["src"]
 builtin_plugins = []
